@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <meta charset="UTF-8">
+ 
+  <meta name="description" content="Zippy-x is a user-friendly and secure file sharing web application that simplifies the process of sending files to others. ">
+    <meta property="title" content="Zippy-X>
+    <meta property="og:description" content="Zippy-x is a user-friendly and secure file sharing web application that simplifies the process of sending files to others.">
+    <meta property="og:image" content="https://ibb.co/R9Y98th">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/password.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Download File</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Download <%= file.originalName %></h2>
+      <br>
+      <p>Are you sure you want to download <%= file.originalName %>?</p>
+      <br>
+      <a href="/file/<%= file.id %>/download" download>
+          <button><i class="fa fa-download" aria-hidden="true" style="color: black;"></i>
+            Download</button>   </a>
+    </div>
+
+   
+  
+  </body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="zippy.svg">
+
+  <title>Zippx</title>
+</head>
+<body>
+
+    <div class="wrapper">
+      <header>File sharing : <span style="color: #af0201;">Simplified</span></header>
+      <div class="upload-container">
+       
+        <form action="/upload" method="post" enctype="multipart/form-data">
+           <label for="file-input" class="upload-icon" style="margin-top: -20px;">
+          <i class="fas fa-cloud-upload-alt"></i>
+        </label>
+        <input class="file-input" type="file" id="file-input" name="file" required >
+        <br><br><br>
+        <p>Browse File to Upload</p>
+        <span id="file-error" style="color: red;"></span> <!-- Add error message element -->
+      </div>
+        <div class="controls">
+          <input type="password" id="password" name="password" placeholder="Password for file (optional)"/>
+          <br>
+          <button type="button" id="share-btn">Upload</button>
+        </div>
+      </form>
+      <br>
+      <section class="progress-area"></section>
+      <section class="uploaded-area"></section>
+    </div>
+    
+  <% if (locals.fileLink != null) { %>
+    
+    
+    <div class="container">
+      <div class="label"> <p style="color: white;">File uploaded! Use this link to share it:</p>
+      </div>
+      <div class="copy-text">
+       
+        <input type="text" class="text" value="<%= locals.fileLink %>" readonly>
+        <button id="share-link-btn">
+          <i class="fa fa-clone"></i>
+        </button>
+      </div>
+    </div>
+  <% } %>
+
+  
+  <div class="info-container">
+    <button class="info-button">
+<i class="far fa-question-circle " style="font-size:20px; color: white;">    </i>
+
+        <span class="info-content">
+        <a href="faq.html" target="_blank">FAQs</a> <br>
+        Made by <a href="https://safal-poudel.com.np" target="_blank">Safal</a> & <a href="https://kcshakti.com.np" target="_blank">Shakti</a>
+      </span>
+    </button>
+  </div>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

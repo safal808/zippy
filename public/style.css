@@ -1,0 +1,388 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.info-container {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+}
+.info-container i {
+  font-size: 50px;
+}
+
+.info-button {
+  position: relative;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.info-content a:hover {
+  color: red;
+}
+
+.info-content {
+  position: absolute;
+  bottom: 100%;
+  left: -200px;
+  width: 250px;
+  padding: 10px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+
+}
+#share-btn{
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#share-btn:hover{
+  background-color: #af0201;
+  color:white;
+}
+
+.info-button:hover .info-content {
+  opacity: 1;
+  visibility: visible;
+  right: 125px;
+}
+
+.info-button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.controls button {
+  color: black;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+input[type="file"]::file-selector-button {
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  background-color: #ccc;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.upload-container {
+  position: relative;
+}
+
+.upload-container .upload-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.upload-container .upload-icon i {
+  font-size: 50px;
+}
+
+.file-input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #292929;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border: none;
+  transform: translate(-50%, -50%);
+  animation: fadeInDown 1.4s ease forwards;
+  width: 100%;
+  max-width: 430px;
+  padding: 0 30px;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.container input {
+  background-color: #1e1e1e;
+}
+
+.label {
+  padding: 10px;
+  font-size: 18px;
+  color: #111;
+}
+
+.copy-text {
+  position: relative;
+  padding: 10px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  display: flex;
+}
+
+.copy-text input.text {
+  padding: 10px;
+  font-size: 18px;
+  color: #555;
+  border: none;
+  outline: none;
+  padding-right: 50px;
+  width: 100%;
+}
+
+.copy-text button {
+  padding: 10px;
+  background: #292926;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.copy-text button:active {
+  color: #111;
+}
+
+.copy-text button:before {
+  content: "Copied";
+  position: absolute;
+  top: 65px;
+  right: 5px;
+  color: black;
+  background: white;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  display: none;
+}
+
+.copy-text button:after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.copy-text.active button:before,
+.copy-text.active button:after {
+  display: block;
+}
+
+::selection {
+  color: #fff;
+  background: #6990f2;
+}
+
+.wrapper {
+  width: 100%;
+  margin-top: 80px;
+  max-width: 430px;
+  background: #1e1e1e;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}
+
+.wrapper header {
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper form {
+  height: auto;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  padding: 10px 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed snow;
+}
+
+form :where(i, p) {
+  color: white;
+}
+
+form i {
+  font-size: 50px;
+}
+
+form p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+section .row {
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .row i {
+  color: #ddd;
+  font-size: 30px;
+}
+
+section .details span {
+  font-size: 14px;
+}
+
+.progress-area .row .content {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.progress-area .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+
+.progress-area .content .progress-bar {
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  border: 0.8px solid #292929;
+  border-radius: 30px;
+}
+
+.content .progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: white;
+  border-radius: inherit;
+}
+
+.uploaded-area {
+  max-height: 232px;
+  overflow-y: scroll;
+}
+
+.uploaded-area.onprogress {
+  max-height: 150px;
+}
+
+.uploaded-area::-webkit-scrollbar {
+  width: 0px;
+}
+
+.uploaded-area .row .content {
+  display: flex;
+  align-items: center;
+}
+
+.uploaded-area .row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+.uploaded-area .row .details .size {
+  color: #404040;
+  font-size: 11px;
+}
+
+.uploaded-area i.fa-check {
+  font-size: 16px;
+}
+
+#password {
+  margin-top: 20px;
+  width: 100%;
+  background: #1e1e1e;
+  border: 0.4px solid rgb(197, 195, 195);
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#password::placeholder {
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    transform: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
