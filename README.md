@@ -69,5 +69,4 @@ npm start
 - Files that have expired (if an expiration date is set) will no longer be available for download.
 - The cron job runs daily at midnight to delete expired files from the database and the file system.
 
-
 Enjoy sharing your files with Zippyx, hassle-free!
