@@ -2,9 +2,9 @@
   "name": "file-sharing-node",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js","type": "module",
+  "main": "index.js","type": "module",
   "scripts": {
-    "devStart": "nodemon index.js"
+    "devStart": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
